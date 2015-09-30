@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<script src="bower_components/opal/opal/current/opal.min.js"></script>
+<script src="bower_components/asciidoctor.js/dist/asciidoctor-core.min.js"></script>
+<!-- If you need docbook backends -->
+<script src="bower_components/asciidoctor.js/dist/asciidoctor-docbook.min.js"></script>
+
+<script type="text/javascript">
+	
+var content = "http://asciidoctor.org[*Asciidoctor*] " +
+    "running on http://opalrb.org[_Opal_] " +
+    "brings AsciiDoc to the browser!";
+var options = Opal.hash2(
+    ['doctype', 'attributes'],
+    {doctype: 'inline', attributes: ['showtitle']});
+var html = Opal.Asciidoctor.$convert(content, options); 
+
+window.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('content').innerHTML = html
+});
+
+</script>
+
+<body>
+
+<h1>My First Heading</h1>
+
+<p id="content"></p>
+
+</body>
+</html>
+
+

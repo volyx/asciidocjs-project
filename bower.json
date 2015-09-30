@@ -1,0 +1,18 @@
+{
+  "name": "asciidocjs-project",
+  "version": "0.0.0",
+  "authors": [
+    "sdfgsdfg"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "asciidoctor.js": "~1.5.2"
+  }
+}
